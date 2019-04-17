@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/{any?}', 'vue')->where('any', '^(?!((api|admin|webhook|docs|oauth)(\/.*)?)$).+');
